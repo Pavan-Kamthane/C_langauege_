@@ -1,0 +1,15 @@
+*/Find if You Are Adult or Not/*
+#include<stdio.h>
+#include<conio.h>
+int  main(){
+	int age;
+	//clrscr();
+	printf("Enter the number ");
+	scanf("%d",&age);
+	if(age >= 18){
+		printf("Your now adult");
+	}else{
+		printf("Your now kid");
+	}
+	///getch();
+}
