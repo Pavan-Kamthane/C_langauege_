@@ -40,6 +40,9 @@ flowchart LR
     commit -->|Finally|creatpr((Create a Pull Request))
     
  ```
+ 
+## To know how to contribute go through this page []()
+
 ### Our Contributors:
 
 <a href="https://github.com/Pavan-Kamthane/C_langauege_/graphs/contributors">
