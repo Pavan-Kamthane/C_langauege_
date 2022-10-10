@@ -44,10 +44,8 @@ flowchart LR
 ## To know how to contribute go through this page [Contributor.md](Contributor.md)
  still if you want help than create a issue and add your quiry
 
-### Our Contributors:
 
-<a href="https://github.com/Pavan-Kamthane/C_langauege_/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Pavan-Kamthane/C_langauege_" />
-</a>
+### [Our Contributors](https://github.com/Pavan-Kamthane/C_langauege_/graphs/contributors)
 
-Made with [contrib.rocks](https://contrib.rocks).
+
+![Contributors](https://contrib.rocks/image?repo=Pavan-Kamthane/C_langauege_)
