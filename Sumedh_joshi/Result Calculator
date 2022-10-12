@@ -1,0 +1,37 @@
+/*A simple Program tp Find the Result of the Examination 
+Hacktoberfest 2022
+*/
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int m;
+clrscr();
+printf("Enter the marks");
+scanf("%d",&m);
+if (m<=85 && m>=100)
+{
+printf("Merit");
+}
+else if(m<=75 && m>=84)
+{
+printf("Distinction");
+}
+else if(m<=60 && m>=74)
+{
+printf("First Class");
+}
+else if (m<=50 && m>=59)
+{
+printf("Second Class");
+}
+else if(m<=40 && m>=49)
+{
+printf("Pass");
+}
+else
+{
+printf("FAIL");
+}
+getch();
+}
