@@ -1,0 +1,16 @@
+/* Simple Program to Convert Distance */
+
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+float km,cm,foot,inch;
+clrscr();
+printf("Enter the distance between two cities in km \n");
+scanf("%f",&km);
+cm=100000/km;
+inch=39370.1/km;
+foot=3280.84/km;
+printf("cm=%f \ninch=%f \nfoot=%f",cm,foot,inch);
+getch();
+}
