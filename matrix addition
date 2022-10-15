@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+int main()
+{
+    int row,column,i,j;
+    int A[5][5],B[5][5],C[5][5],Res[5][5];
+    
+     // first matrix 
+     
+    printf("For first matrix \n");
+    printf("Enter the number of rows ( less than 5 ) : ");
+    scanf("%d",&row);
+    printf("Enter number of columns ( less than 5 ) : ");
+    scanf("%d",&column);
+    printf("Enter the elements : ");
+    for (i=0; i<row; i++)
+    {
+        for (j=0; j<column; j++)
+        {
+            scanf("%d",&A[i][j]);    
+        }
+    }
+    
+    // second matrix
+    
+    printf("FOR SECOND MATRIX \n");
+    printf("Enter the number of rows ( less than 5 ) : ");
+    scanf("%d",&row);
+    printf("Enter number of columns ( less than 5 ) : ");
+    scanf("%d",&column);
+    printf("Enter the elements : ");
+    for (i=0; i<row; i++)
+    {
+        for (j=0; j<column; j++)
+        {
+            scanf("%d",&B[i][j]);
+        }
+    }
+    
+    // third MATRIX
+    
+    printf("FOR THIRD MATRIX \n");
+    printf("Enter the number of rows ( less than 5 ) : ");
+    scanf("%d",&row);
+    printf("Enter number of columns ( less than 5 ) : ");
+    scanf("%d",&column);
+    printf("Enter the elements : ");
+    for (i=0; i<row; i++)
+    {
+        for (j=0; j<column; j++)
+        {
+            scanf("%d",&C[i][j]);
+        }
+    }
+    
+    // sum of matrices
+    
+    printf("Sum of matrices : \n");
+    for (i=0; i<row; i++)
+    {
+        for (j=0; j<column; j++)
+        {
+            Res[i][j] = A[i][j] + B[i][j] + C[i][j];
+            printf("%d \t", Res[i][j]);
+        }
+        printf("\n");
+    }
+}
