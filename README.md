@@ -50,4 +50,4 @@ flowchart LR
   <img src="https://contrib.rocks/image?repo=Pavan-Kamthane/C_langauege_" />
 </a>
 
-Made with [contrib.rocks](https://contrib.rocks).
+Made with [contrib.rocks](https://contrib.rocks)
