@@ -33,4 +33,4 @@ void main ()
     bubble(a, n);  
     printf("\nAfter sorting array elements are - \n");    
     print(a, n);  
-}  
+} 
