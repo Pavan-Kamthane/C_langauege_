@@ -1,46 +1,36 @@
-
-
-#include <stdio.h>
-
-// perform the bubble sort
-void bubbleSort(int array[], int size) {
-
-  // loop to access each array element
-  for (int step = 0; step < size - 1; ++step) {
-      
-    // loop to compare array elements
-    for (int i = 0; i < size - step - 1; ++i) {
-      
-      // compare two adjacent elements
-      // change > to < to sort in descending order
-      if (array[i] > array[i + 1]) {
-        
-        // swapping occurs if elements
-        // are not in the intended order
-        int temp = array[i];
-        array[i] = array[i + 1];
-        array[i + 1] = temp;
-      }
-    }
-  }
-}
-
-// print array
-void printArray(int array[], int size) {
-  for (int i = 0; i < size; ++i) {
-    printf("%d  ", array[i]);
-  }
-  printf("\n");
-}
-
-int main() {
-  int data[] = {-2, 45, 0, 11, -9};
-  
-  // find the array's length
-  int size = sizeof(data) / sizeof(data[0]);
-
-  bubbleSort(data, size);
-  
-  printf("Sorted Array in Ascending Order:\n");
-  printArray(data, size);
-}
+#include<stdio.h>    
+ void print(int a[], int n) //function to print array elements  
+    {  
+    int i;  
+    for(i = 0; i < n; i++)    
+    {    
+        printf("%d ",a[i]);    
+    }        
+    }  
+ void bubble(int a[], int n) // function to implement bubble sort  
+ {  
+   int i, j, temp;  
+   for(i = 0; i < n; i++)    
+    {    
+      for(j = i+1; j < n; j++)    
+        {    
+            if(a[j] < a[i])    
+            {    
+                temp = a[i];    
+                a[i] = a[j];    
+                a[j] = temp;     
+            }     
+        }     
+    }     
+ }  
+void main ()    
+{    
+    int i, j,temp;     
+    int a[5] = { 10, 35, 32, 13, 26};     
+    int n = sizeof(a)/sizeof(a[0]);   
+    printf("Before sorting array elements are - \n");  
+    print(a, n);  
+    bubble(a, n);  
+    printf("\nAfter sorting array elements are - \n");    
+    print(a, n);  
+} 
