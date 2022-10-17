@@ -1,0 +1,38 @@
+// output
+// enter the no. of rows and columns: 5 5
+// * * * * * 
+// *       * 
+// *       * 
+// *       * 
+// * * * * * 
+
+#include<stdio.h>
+
+int main()
+{
+    int row, col, i, j;
+
+    printf("enter the no. of rows and columns: ");
+    scanf("%d",&row);
+    scanf("%d",&col);
+
+    for (i = 1; i <= row; i++)
+    {
+        for (j = 1; j <= col; j++)
+        {
+            if (i == 1 || i == row)
+            {
+                printf("* ");
+            }
+            else if (j == 1 || j == col)
+            {
+                printf("* ");
+            }
+            else
+                printf("  ");
+                        }
+        printf("\n");
+    }
+    return 0;
+}
+
