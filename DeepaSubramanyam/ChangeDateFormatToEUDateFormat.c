@@ -3,6 +3,7 @@ Sample Input: May 12,2000
 Sample Output:12/5/2000
 Sample Input:12/4/2000
 Sample Output:4/12/2000
+Note:This program will not check whether given user input date is valid or not
 */
 
 #include<stdio.h>
