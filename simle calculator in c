@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+
+  char opp;
+  double 1st, 2nd;
+  printf("Enter operator (+, -, *, /): ");
+  scanf("%c", &opp);
+  printf("Enter 2 operands: ");
+  scanf("%lf %lf", &1st, &2nd);
+
+  switch (opp) {
+    case '+':
+      printf("%.1lf + %.1lf = %.1lf", 1st, 2nd, 1st + 2nd);
+      break;
+    case '-':
+      printf("%.1lf - %.1lf = %.1lf", 1st, 2nd, 1st - 2nd);
+      break;
+    case '*':
+      printf("%.1lf * %.1lf = %.1lf", 1st, 2nd, 1st * 2nd);
+      break;
+    case '/':
+      printf("%.1lf / %.1lf = %.1lf", 1st, 2nd, 1st / 2nd);
+      break;
+    default:
+      printf("Error! operator isn't correct");
+  }
+
+  return 0;
+}
