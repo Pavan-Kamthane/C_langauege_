@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Removing Blank space from a string
+
+int main()
+{
+    char string[1000];  
+    int i, k = 0;
+    printf("Enter the string: ");
+    gets(string);
+
+    for(i=0; string[i]; i++)
+    {
+     	string[i] = string[i + k];
+
+     	
+     	if(string[i]==' ' || string[i]== '\t')
+     	{
+		  k++;
+		  i--;
+	    }
+    }
+
+    printf("The string after removing all the blank spaces: %s", string);
+
+    return 0;
+}
