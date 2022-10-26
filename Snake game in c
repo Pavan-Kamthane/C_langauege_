@@ -1,0 +1,131 @@
+#include <conio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int a, b, hei = 20, wid = 20;
+int failed, score;
+int c, d, fruitc, fruitd, flag;
+
+void setup()
+{
+   failed = 0;
+
+    c = hei / 2;
+    d = wid / 2;
+label1:
+    fruitc = rand() % 20;
+    if (fruitc == 0)
+        goto label1;
+label2:
+    fruitd = rand() % 20;
+    if (fruitd == 0)
+        goto label2;
+    score = 0;
+}
+
+
+void draw()
+{
+    system("cls");
+    for (a = 0; a < hei; a++) {
+        for (b = 0; b < wid; b++) {
+            if (a == 0 || a == wid - 1
+                || b == 0
+                || b == hei - 1) {
+                printf("#");
+            }
+            else {
+                if (a == c && b == d)
+                    printf("0");
+                else if (a == fruitc
+                         && b == fruitd=d)
+                    printf("*");
+                else
+                    printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    printf("score = %d", score);
+    printf("\n");
+    printf("press X to quit the game");
+}
+
+void input()
+{
+    if (kbhit()) {
+        switch (getch()) {
+        case 'a':
+            flag = 1;
+            break;
+        case 's':
+            flag = 2;
+            break;
+        case 'd':
+            flag = 3;
+            break;
+        case 'w':
+            flag = 4;
+            break;
+        case 'x':
+            failed = 1;
+            break;
+        }
+    }
+}
+
+void logic()
+{
+    sleep(0.01);
+    switch (flag) {
+    case 1:
+        d--;
+        break;
+    case 2:
+        c++;
+        break;
+    case 3:
+        d++;
+        break;
+    case 4:
+        c--;
+        break;
+    default:
+        break;
+    }
+
+    if (c < 0 || c > hei
+        || d < 0 || d > wid)
+        failed = 1;
+
+    if (c == fruitc && d == fruitd) {
+    label3:
+        fruitc = rand() % 20;
+        if (fruitc == 0)
+            goto label3;
+
+    label4:
+        fruitd = rand() % 20;
+        if (fruitd == 0)
+            goto label4;
+        score += 10;
+    }
+}
+
+void main()
+{
+    int o, p;
+
+    setup();
+
+
+    while (!failed) {
+
+        // Function Call
+        draw();
+        input();
+        logic();
+    }
+}
